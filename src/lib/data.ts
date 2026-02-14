@@ -68,26 +68,26 @@ export const projects: Project[] = [
   },
   {
     id: "project-2",
-    title: "Dashboard Analytics",
+    title: "Powerlifting referee lights",
     description:
-      "Panel de analíticas en tiempo real con visualización de datos avanzada, WebSockets para actualizaciones instantáneas y exportación automatizada de reportes.",
+      "Sistema web que conecta los telefonos de tres jueces con un monitor Smart TV para mostrar en tiempo real el resultado de cada juez durante una competencia de powerlifting. Proyecto open source.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB", "Socket.io"],
+      "/projects/PRL.png",
+    technologies: ["HTML", "Python"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/alexantonioo/Powerlifting-referee-lights",
     featured: true,
   },
   {
     id: "project-3",
-    title: "AI Content Generator",
+    title: "Face to Face",
     description:
-      "Herramienta SaaS para generación de contenido con IA, integración con múltiples modelos LLM, historial de versiones y colaboración en equipo.",
+      "Juego 2D desarrollado en C++ con SFML para el proyecto final de Programación 3 (Universidad de los Andes). Implementado usando árboles como estructura de datos. Modo singleplayer con IA. Desarrollado con mis amigos Gustavo y Leonardo.",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
-    technologies: ["Python", "FastAPI", "React", "OpenAI", "AWS"],
+      "/projects/facetoface.png",
+    technologies: ["C++", "SFML"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/alexantonioo/face-to-face",
     featured: true,
   },
   {
