@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -34,7 +33,6 @@ export default function Home() {
           <Projects />
           <TechStack />
           <About />
-          <Testimonials />
           <Contact />
         </main>
       </div>

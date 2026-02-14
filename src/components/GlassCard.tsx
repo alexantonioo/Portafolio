@@ -9,6 +9,8 @@ interface GlassCardProps {
   intense?: boolean;
   hover?: boolean;
   delay?: number;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export default function GlassCard({
@@ -17,6 +19,8 @@ export default function GlassCard({
   intense = false,
   hover = true,
   delay = 0,
+  onMouseEnter,
+  onMouseLeave,
 }: GlassCardProps) {
   return (
     <motion.div
@@ -28,6 +32,8 @@ export default function GlassCard({
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={`
         rounded-2xl
         ${intense ? "glass-intense" : "glass"}

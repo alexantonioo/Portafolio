@@ -1,13 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import GlassCard from "./GlassCard";
 import { projects } from "@/lib/data";
+import { useState } from "react";
 
 export default function Projects() {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
   return (
-    <section id="proyectos" className="py-20">
+    <section id="proyectos" className="pb-20 pt-8">
       {/* ── Section Title ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -17,9 +20,7 @@ export default function Projects() {
         className="mb-10"
       >
         <h2 className="text-3xl font-black tracking-tight sm:text-4xl lg:text-[2.75rem]">
-          Proyectos Recientes{" "}
-          <br className="hidden sm:block" />
-          y{" "}
+          Proyectos y{" "}
           <span className="bg-gradient-to-r from-electric-purple to-electric-purple/80 bg-clip-text text-transparent">
             Logros
           </span>
@@ -33,6 +34,8 @@ export default function Projects() {
             key={project.id}
             className="group overflow-hidden"
             delay={index * 0.1}
+            onMouseEnter={() => setHoveredProject(project.id)}
+            onMouseLeave={() => setHoveredProject(null)}
           >
             {/* ── Project Image ── */}
             <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
@@ -44,6 +47,23 @@ export default function Projects() {
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+              {/* Description overlay on hover */}
+              <AnimatePresence>
+                {hoveredProject === project.id && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute inset-0 flex items-center justify-center bg-black/80 p-6 backdrop-blur-sm"
+                  >
+                    <p className="text-center text-sm leading-relaxed text-white/90">
+                      {project.description}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* Action icons (visible on hover) */}
               <div className="absolute right-3 top-3 flex gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">

@@ -1,32 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Heart } from "lucide-react";
+import { Heart, MessageCircle, QrCode } from "lucide-react";
 import GlassCard from "./GlassCard";
+import Image from "next/image";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate submission — replace with actual API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-
-    setTimeout(() => setSubmitted(false), 4000);
-  };
+  // Reemplaza con tu número de WhatsApp en formato internacional (ejemplo: 51912345678)
+  const whatsappNumber = "584126759194"; // Cambia esto por tu número
+  const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
     <section id="contacto" className="py-20">
@@ -46,118 +28,64 @@ export default function Contact() {
           </span>
         </h2>
         <p className="mt-4 max-w-lg text-base leading-relaxed text-slate-400">
-          Estoy siempre abierto a nuevas oportunidades y colaboraciones.
-          Hablemos sobre cómo puedo ayudarte a llevar tu idea al siguiente
-          nivel.
+          Para una comunicación más directa y personal 1 a 1, puedes escribirme
+          a mi WhatsApp. Respondo rápido y con gusto conversaré sobre tu
+          proyecto.
         </p>
       </motion.div>
 
-      {/* ── Contact Form ── */}
-      <GlassCard intense className="p-6 sm:p-8" hover={false}>
-        {submitted ? (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="flex flex-col items-center justify-center py-12 text-center"
+      {/* ── WhatsApp Section ── */}
+      <div className="grid gap-5 sm:grid-cols-2">
+        {/* Contact Card */}
+        <GlassCard intense className="flex flex-col items-center p-8 text-center" hover={false}>
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/10">
+            <MessageCircle className="h-8 w-8 text-green-400" />
+          </div>
+          <h3 className="mb-2 text-lg font-bold text-slate-100">
+            Chatea conmigo
+          </h3>
+          <p className="mb-auto text-sm text-slate-400">
+            Conversemos sobre tu proyecto directamente por WhatsApp
+          </p>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-green-500 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-green-600 hover:shadow-[0_0_24px_rgba(34,197,94,0.35)]"
           >
-            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-electric-purple/10 text-electric-purple">
-              <Send className="h-7 w-7" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-100">
-              ¡Mensaje enviado!
-            </h3>
-            <p className="mt-2 text-sm text-slate-400">
-              Te responderé lo antes posible.
-            </p>
-          </motion.div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label
-                htmlFor="name"
-                className="mb-1.5 block text-sm font-medium text-slate-300"
-              >
-                Nombre completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                required
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all focus:border-electric-purple/40 focus:bg-white/[0.05] focus:ring-1 focus:ring-electric-purple/20"
-                placeholder="Tu nombre"
-              />
-            </div>
+            <MessageCircle className="h-4 w-4" />
+            Abrir WhatsApp
+          </a>
+        </GlassCard>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-1.5 block text-sm font-medium text-slate-300"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                required
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all focus:border-electric-purple/40 focus:bg-white/[0.05] focus:ring-1 focus:ring-electric-purple/20"
-                placeholder="tu@email.com"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="mb-1.5 block text-sm font-medium text-slate-300"
-              >
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                required
-                rows={4}
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all focus:border-electric-purple/40 focus:bg-white/[0.05] focus:ring-1 focus:ring-electric-purple/20"
-                placeholder="Cuéntame sobre tu proyecto..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-electric-purple px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-electric-purple/90 hover:shadow-[0_0_24px_rgba(168,85,247,0.35)] disabled:opacity-50"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-                  Enviando...
-                </>
-              ) : (
-                <>
-                  <Send className="h-4 w-4" />
-                  Enviar mensaje
-                </>
-              )}
-            </button>
-          </form>
-        )}
-      </GlassCard>
+        {/* QR Code Card */}
+        <GlassCard intense className="flex flex-col items-center p-8" hover={false}>
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-electric-purple/20 to-neon-cyan/10">
+            <QrCode className="h-8 w-8 text-electric-purple" />
+          </div>
+          <h3 className="mb-2 text-lg font-bold text-slate-100">
+            Escanea el QR
+          </h3>
+          <p className="mb-auto text-sm text-slate-400">
+            Usa la cámara de tu móvil para conectar al instante
+          </p>
+          <div className="relative mt-6 h-48 w-48 overflow-hidden rounded-xl bg-white p-3">
+            {/* Placeholder para el QR - Coloca tu QR en public/whatsapp-qr.png */}
+            <Image
+              src="/whatsapp-qr.png"
+              alt="WhatsApp QR Code"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </GlassCard>
+      </div>
 
       {/* ── Footer ── */}
       <div className="mt-16 border-t border-white/[0.05] pt-6">
         <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
           <p className="text-xs text-slate-600">
-            © {new Date().getFullYear()} DevFolio. Todos los derechos
+            © {new Date().getFullYear()} Todos los derechos
             reservados.
           </p>
           <p className="flex items-center gap-1.5 text-xs text-slate-600">

@@ -33,20 +33,12 @@ export interface TechItem {
 export const techStack: TechItem[] = [
   { name: "React", icon: "⚛️", color: "#61DAFB", category: "frontend" },
   { name: "Next.js", icon: "▲", color: "#ffffff", category: "frontend" },
-  { name: "TypeScript", icon: "TS", color: "#3178C6", category: "frontend" },
+  { name: "JavaScript/TypeScript", icon: "JS", color: "#F7DF1E", category: "frontend" },
   { name: "Tailwind CSS", icon: "🎨", color: "#06B6D4", category: "frontend" },
-  { name: "Node.js", icon: "🟢", color: "#339933", category: "backend" },
   { name: "Python", icon: "🐍", color: "#3776AB", category: "backend" },
-  { name: "PostgreSQL", icon: "🐘", color: "#4169E1", category: "backend" },
-  { name: "MongoDB", icon: "🍃", color: "#47A248", category: "backend" },
-  { name: "AWS", icon: "☁️", color: "#FF9900", category: "cloud" },
-  { name: "Docker", icon: "🐳", color: "#2496ED", category: "cloud" },
-  { name: "GraphQL", icon: "◈", color: "#E10098", category: "backend" },
-  { name: "Redis", icon: "⚡", color: "#DC382D", category: "backend" },
-  { name: "Git", icon: "🔀", color: "#F05032", category: "tools" },
-  { name: "Figma", icon: "🎯", color: "#F24E1E", category: "tools" },
-  { name: "Linux", icon: "🐧", color: "#FCC624", category: "tools" },
-  { name: "Kubernetes", icon: "☸️", color: "#326CE5", category: "cloud" },
+  { name: "C++", icon: "C++", color: "#00599C", category: "backend" },
+  { name: "C#", icon: "C#", color: "#512BD4", category: "backend" },
+  { name: ".NET", icon: ".NET", color: "#512BD4", category: "backend" },
 ];
 
 /* ── Projects ── */
@@ -64,13 +56,13 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
-    title: "E-Commerce Platform",
+    title: "Victoria's Cake Academy",
     description:
-      "Plataforma de comercio electrónico full stack con pasarela de pagos, panel de administración en tiempo real y sistema de recomendaciones basado en IA.",
+      "Academia de repostería online con sistema de pagos integrado, gestión de cursos en video y plataforma de recetas. Almacenamiento distribuido con Bunny.net para streaming optimizado.",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis"],
-    demoUrl: "#",
+      "/projects/victoriascake.png",
+    technologies: ["React", "Next.js", "Tailwind CSS", "Supabase", "Bunny.net"],
+    demoUrl: "https://victoriascake.com",
     githubUrl: "#",
     featured: true,
   },
@@ -178,27 +170,24 @@ export const testimonials: Testimonial[] = [
 
 /* ── Stats ── */
 export const stats = [
-  { label: "Años de experiencia", value: "5+" },
-  { label: "Proyectos completados", value: "40+" },
-  { label: "Clientes satisfechos", value: "25+" },
-  { label: "Tecnologías dominadas", value: "20+" },
+  { label: "Proyectos completados", value: "6" },
 ];
 
 /* ── Social Links ── */
 export const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/tuusuario",
+    href: "https://github.com/alexantonioo",
     icon: "github",
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/tuusuario",
+    href: "https://linkedin.com/in/alex-antonio-contreras-pereira-b02aa6352",
     icon: "linkedin",
   },
   {
     label: "Email",
-    href: "mailto:tu@email.com",
+    href: "mailto:alexantonio1225@gmail.com",
     icon: "mail",
   },
 ];

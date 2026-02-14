@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
-  Instagram,
   MessageCircle,
   Download,
 } from "lucide-react";
@@ -32,11 +31,13 @@ export default function ProfileSidebar() {
           <div className="absolute -bottom-4 -right-4 z-0 h-24 w-24 rounded-full bg-neon-cyan/20 blur-3xl" />
 
           {/* Photo placeholder — replace src with your actual photo */}
-          <div className="relative z-[1] flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-electric-purple/40 to-neon-cyan/20 text-4xl font-black text-white/70 ring-2 ring-white/10">
-              FS
-            </div>
-          </div>
+          <Image
+            src="/profile.png"
+            alt="Alex Contreras"
+            fill
+            className="relative z-[1] object-cover"
+            priority
+          />
 
           {/* Inner border for glass effect */}
           <div className="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-white/[0.08]" />
@@ -45,27 +46,25 @@ export default function ProfileSidebar() {
 
       {/* ── Name ── */}
       <h2 className="text-center text-2xl font-bold tracking-tight text-white lg:text-[1.65rem]">
-        Tu Nombre
+        Alex Contreras
       </h2>
 
       {/* ── Role ── */}
       <p className="mt-1.5 text-center text-sm font-medium text-slate-400">
-        Full Stack Developer
+        Desarrollador de Software
       </p>
 
       {/* ── Location ── */}
       <p className="mt-0.5 text-center text-sm text-slate-500">
-        Tu Ciudad, País
+        Estudiante de Ingeniería de Sistemas
       </p>
 
       {/* ── Social Icons ── */}
       <div className="mt-6 flex items-center gap-3">
         {[
-          { icon: Github, href: "https://github.com/tuusuario", label: "GitHub" },
-          { icon: Linkedin, href: "https://linkedin.com/in/tuusuario", label: "LinkedIn" },
-          { icon: Twitter, href: "https://twitter.com/tuusuario", label: "Twitter" },
-          { icon: Instagram, href: "https://instagram.com/tuusuario", label: "Instagram" },
-          { icon: Mail, href: "mailto:tu@email.com", label: "Email" },
+          { icon: Github, href: "https://github.com/alexantonioo", label: "GitHub" },
+          { icon: Linkedin, href: "https://linkedin.com/in/alex-antonio-contreras-pereira-b02aa6352", label: "LinkedIn" },
+          { icon: Mail, href: "mailto:alexantonio1225@gmail.com", label: "Email" },
         ].map((social) => (
           <a
             key={social.label}
@@ -82,13 +81,15 @@ export default function ProfileSidebar() {
 
       {/* ── CTA Button ── */}
       <a
-        href="#contacto"
-        className="group mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-electric-purple px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-electric-purple/90 hover:shadow-[0_0_24px_rgba(168,85,247,0.35)]"
+        href="https://wa.me/584126759194"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-green-500 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-green-600 hover:shadow-[0_0_24px_rgba(34,197,94,0.35)]"
       >
         <MessageCircle className="h-4 w-4" />
-        Hablemos
+        WhatsApp
       </a>
-
+  
       {/* ── Download CV (secondary) ── */}
       <a
         href="/cv.pdf"
