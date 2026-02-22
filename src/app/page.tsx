@@ -22,14 +22,14 @@ export default function Home() {
           Left: Sticky Profile Sidebar
           Right: Scrollable Content Sections
       ══════════════════════════════════════════════ */}
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-24 sm:px-6 lg:flex-row lg:gap-10 lg:px-8">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-8 sm:pt-24 sm:px-6 lg:flex-row lg:gap-10 lg:px-8">
         {/* ── Left: Profile Sidebar (sticky on desktop, static on mobile) ── */}
         <div className="w-full shrink-0 lg:w-[340px] xl:w-[380px]">
           <ProfileSidebar />
         </div>
 
         {/* ── Right: Main Content Area ── */}
-        <main className="min-w-0 flex-1 pb-16">
+        <main className="min-w-0 flex-1 pb-24 sm:pb-16">
           <Hero />
           <Projects />
           <TechStack />

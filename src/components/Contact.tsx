@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Heart, MessageCircle, QrCode } from "lucide-react";
 import GlassCard from "./GlassCard";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export default function Contact() {
   // Reemplaza con tu número de WhatsApp en formato internacional (ejemplo: 51912345678)
@@ -72,7 +73,7 @@ export default function Contact() {
           <div className="relative mt-6 h-48 w-48 overflow-hidden rounded-xl bg-white p-3">
             {/* Placeholder para el QR - Coloca tu QR en public/whatsapp-qr.png */}
             <Image
-              src="/whatsapp-qr.png"
+              src={asset("/whatsapp-qr.png")}
               alt="WhatsApp QR Code"
               fill
               className="object-contain"

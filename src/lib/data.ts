@@ -111,7 +111,7 @@ export const projects: Project[] = [
     technologies: ["C#", "WPF", "SQL"],
     demoUrl: "#",
     githubUrl: "#",
-    infoUrl: "https://football.example.com",
+    infoUrl: "",
     featured: true,
   },
   {

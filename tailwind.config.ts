@@ -17,7 +17,7 @@ const config: Config = {
         "glass-bg": "rgba(255, 255, 255, 0.03)",
       },
       fontFamily: {
-        sans: ["Inter", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       backdropBlur: {
         glass: "16px",
@@ -34,6 +34,10 @@ const config: Config = {
         "orb-float": "orbFloat 20s ease-in-out infinite",
         "orb-float-reverse": "orbFloatReverse 25s ease-in-out infinite",
         "orb-float-slow": "orbFloatSlow 30s ease-in-out infinite",
+        "orb-1": "orbFloat 20s ease-in-out infinite",
+        "orb-2": "orbFloatReverse 25s ease-in-out infinite",
+        "orb-3": "orbFloatSlow 30s ease-in-out infinite",
+        "orb-4": "orbFloat 18s ease-in-out infinite reverse",
         "fade-in-up": "fadeInUp 0.6s ease-out forwards",
         marquee: "marquee 40s linear infinite",
         "marquee-reverse": "marqueeReverse 40s linear infinite",

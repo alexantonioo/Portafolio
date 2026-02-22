@@ -9,6 +9,7 @@ import {
   MessageCircle,
   Download,
 } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 export default function ProfileSidebar() {
   return (
@@ -32,7 +33,7 @@ export default function ProfileSidebar() {
 
           {/* Photo placeholder — replace src with your actual photo */}
           <Image
-            src="/profile.png"
+            src={asset("/profile.png")}
             alt="Alex Contreras"
             fill
             className="relative z-[1] object-cover"

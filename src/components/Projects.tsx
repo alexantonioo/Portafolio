@@ -34,7 +34,7 @@ export default function Projects() {
           <GlassCard
             key={project.id}
             className="group overflow-hidden"
-            delay={index * 0.1}
+            delay={index * 0.05}
             onMouseEnter={() => setHoveredProject(project.id)}
             onMouseLeave={() => setHoveredProject(null)}
           >

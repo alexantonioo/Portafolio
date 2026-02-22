@@ -104,7 +104,7 @@ export default function TechStack() {
             <GlassCard
               key={tech.name}
               className="flex items-center gap-4 px-5 py-4"
-              delay={index * 0.04}
+              delay={index * 0.02}
             >
               {/* Icon */}
               <div
