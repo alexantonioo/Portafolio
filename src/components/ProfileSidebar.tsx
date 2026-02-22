@@ -7,7 +7,6 @@ import {
   Linkedin,
   Mail,
   MessageCircle,
-  Download,
 } from "lucide-react";
 import { asset } from "@/lib/asset";
 
@@ -90,8 +89,9 @@ export default function ProfileSidebar() {
         <MessageCircle className="h-4 w-4" />
         WhatsApp
       </a>
-  
+
       {/* ── Download CV (secondary) ── */}
+      {/* Temporarily hidden
       <a
         href="/cv.pdf"
         download
@@ -100,6 +100,7 @@ export default function ProfileSidebar() {
         <Download className="h-4 w-4" />
         Descargar CV
       </a>
+      */}
     </motion.aside>
   );
 }
