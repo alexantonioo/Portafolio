@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Info } from "lucide-react";
 import GlassCard from "./GlassCard";
 import { projects } from "@/lib/data";
 import { useState } from "react";
@@ -67,24 +67,39 @@ export default function Projects() {
 
               {/* Action icons (visible on hover) */}
               <div className="absolute right-3 top-3 flex gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-electric-purple/90 text-white backdrop-blur-sm transition-transform hover:scale-110"
-                  aria-label={`Ver demo de ${project.title}`}
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-sm transition-transform hover:scale-110"
-                  aria-label={`Ver código de ${project.title}`}
-                >
-                  <Github className="h-4 w-4" />
-                </a>
+                {project.infoUrl && project.infoUrl !== "#" && (
+                  <a
+                    href={project.infoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-sm transition-transform hover:scale-110"
+                    aria-label={`Mas informacion de ${project.title}`}
+                  >
+                    <Info className="h-4 w-4" />
+                  </a>
+                )}
+                {project.demoUrl && project.demoUrl !== "#" && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-electric-purple/90 text-white backdrop-blur-sm transition-transform hover:scale-110"
+                    aria-label={`Ver demo de ${project.title}`}
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                )}
+                {project.githubUrl && project.githubUrl !== "#" && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-sm transition-transform hover:scale-110"
+                    aria-label={`Ver código de ${project.title}`}
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                )}
               </div>
             </div>
 
