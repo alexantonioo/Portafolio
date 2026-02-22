@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Info } from "lucide-react";
 import GlassCard from "./GlassCard";
 import { projects } from "@/lib/data";
+import { asset } from "@/lib/asset";
 import { useState } from "react";
 
 export default function Projects() {
@@ -41,7 +42,7 @@ export default function Projects() {
             <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
               <div
                 className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url(${project.image})` }}
+                style={{ backgroundImage: `url(${asset(project.image)})` }}
                 role="img"
                 aria-label={`Captura del proyecto ${project.title}`}
               />

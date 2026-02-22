@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
 import GlassCard from "./GlassCard";
 import { certifications } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export default function Certifications() {
   return (
@@ -36,7 +37,7 @@ export default function Certifications() {
             {cert.pdfUrl && cert.pdfUrl !== "#" ? (
               <div className="relative w-full overflow-hidden rounded-t-2xl bg-slate-900" style={{ height: "320px" }}>
                 <iframe
-                  src={cert.pdfUrl}
+                  src={asset(cert.pdfUrl)}
                   className="h-full w-full border-0"
                   title={cert.title}
                 />
