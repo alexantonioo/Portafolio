@@ -60,10 +60,10 @@ export default function About() {
         className="mb-10 max-w-2xl"
       >
         <p className="text-base leading-relaxed text-slate-400">
-          Soy un Desarrollador Full Stack con más de 5 años de experiencia
-          creando productos digitales que impactan. Me especializo en
-          transformar ideas complejas en soluciones elegantes y escalables.
-          Mi enfoque combina excelencia técnica con visión de producto.
+         Soy un Desarrollador Full Stack apasionado por crear productos digitales 
+         que generen impacto. Me especializo en transformar ideas complejas en 
+         soluciones elegantes, robustas y escalables, combinando excelencia técnica 
+         con una fuerte visión de producto para resolver problemas reales.
         </p>
       </motion.div>
 
