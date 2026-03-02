@@ -26,7 +26,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="mt-6 max-w-lg rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 backdrop-blur-[10px]"
+        className="mt-6 max-w-lg rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5"
       >
         <p className="text-base leading-relaxed text-slate-300">
           Apasionado por construir tecnología que resuelve necesidades reales. Me especializo en transformar conceptos complejos en soluciones innovadoras, creando productos digitales que destacan por su funcionalidad y calidad.

@@ -94,7 +94,7 @@ export default function TechStack() {
       </motion.div>
 
       {/* ── Tech Cards Grid (2-column, like reference) ── */}
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2" style={{ contain: "content" }}>
         {techStack.map((tech, index) => {
           const logo = techLogos[tech.name] || {
             bg: "from-slate-500/20 to-slate-600/10",

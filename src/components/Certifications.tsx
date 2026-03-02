@@ -40,6 +40,7 @@ export default function Certifications() {
                   src={asset(cert.pdfUrl)}
                   className="h-full w-full border-0"
                   title={cert.title}
+                  loading="lazy"
                 />
               </div>
             ) : (

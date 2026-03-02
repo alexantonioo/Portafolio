@@ -24,13 +24,13 @@ export default function GlassCard({
 }: GlassCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-30px" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-20px", amount: 0.05 }}
       transition={{
-        duration: 0.4,
+        duration: 0.3,
         delay,
-        ease: [0.22, 1, 0.36, 1],
+        ease: "easeOut",
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

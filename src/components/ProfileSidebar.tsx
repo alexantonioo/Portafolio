@@ -16,7 +16,7 @@ export default function ProfileSidebar() {
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="sticky top-8 flex h-fit flex-col items-center rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 backdrop-blur-xl lg:p-8"
+      className="sticky top-8 flex h-fit flex-col items-center rounded-3xl border border-white/[0.08] bg-[#0d0d18]/90 p-6 lg:p-8"
       style={{
         boxShadow:
           "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04)",

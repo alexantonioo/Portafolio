@@ -40,11 +40,12 @@ export default function Projects() {
           >
             {/* ── Project Image ── */}
             <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
-              <div
-                className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url(${asset(project.image)})` }}
-                role="img"
-                aria-label={`Captura del proyecto ${project.title}`}
+              <img
+                src={asset(project.image)}
+                alt={`Captura del proyecto ${project.title}`}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
