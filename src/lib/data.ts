@@ -67,6 +67,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
+    title: "Kliniko",
+    description:
+      "Aplicación web de gestión desarrollada para un grupo de clientes fisioterapeutas. Centraliza la operación diaria de la clínica en una interfaz rápida y adaptable, construida con Vite, React, TypeScript y Tailwind CSS.",
+    image:
+      "/projects/kliniko.svg",
+    technologies: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "",
+    githubUrl: "",
+    featured: true,
+  },
+  {
+    id: "project-2",
     title: "Adivina Adivinador",
     description:
       "Modelo de inteligencia artificial que reconoce garabatos en vivo: una CNN entrenada con Keras/TensorFlow y exportada a TensorFlow.js clasifica en el navegador 24 categorías dibujadas frente a la webcam, con inferencia 100% local. La web recopila los 137 registros capturados en el XXVI Encuentro con la Física, Química, Matemática y Biología. Desarrollado junto a Jasneidy Pernia.",
@@ -78,7 +90,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "project-2",
+    id: "project-3",
     title: "Victoria's Cake Academy",
     description:
       "Academia de repostería online con sistema de pagos integrado, gestión de cursos en video y plataforma de recetas. Almacenamiento distribuido con Bunny.net para streaming optimizado.",
@@ -90,7 +102,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "project-3",
+    id: "project-4",
     title: "Powerlifting referee lights",
     description:
       "Sistema web que conecta los telefonos de tres jueces con un monitor Smart TV para mostrar en tiempo real el resultado de cada juez durante una competencia de powerlifting. Proyecto open source.",
@@ -102,7 +114,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "Face to Face",
     description:
       "Juego 2D desarrollado en C++ con SFML para el proyecto final de Programación 3 (Universidad de los Andes). Implementado usando árboles como estructura de datos. Modo singleplayer con IA. Desarrollado con mis amigos Gustavo Nieves y Leonardo Arellano.",
@@ -114,7 +126,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Football Project",
     description:
       "Sistema de gestión de equipos de fútbol desarrollado en C# con WPF. Permite a la dirigencia administrativa del club tomar el control de las finanzas llevando registro de cualquier movimiento",
@@ -127,7 +139,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "Trueload",
     description:
       "Calculadora desarrollada para el entrenador personal David Medina. La herramienta estima con alta precisión la repetición máxima (1RM) de cualquier atleta en ejercicios fundamentales como sentadilla, press de banca y peso muerto, implementando diversas fórmulas respaldadas por evidencia científica.",
@@ -211,7 +223,7 @@ export const certifications: Certification[] = [
 
 /* ── Stats ── */
 export const stats = [
-  { label: "Proyectos completados", value: "6" },
+  { label: "Proyectos completados", value: "7" },
 ];
 
 /* ── Social Links ── */
