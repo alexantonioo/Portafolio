@@ -71,7 +71,7 @@ export const projects: Project[] = [
     description:
       "Aplicación web de gestión desarrollada para un grupo de clientes fisioterapeutas. Centraliza la operación diaria de la clínica en una interfaz rápida y adaptable, construida con Vite, React, TypeScript y Tailwind CSS.",
     image:
-      "/projects/kliniko.svg",
+      "/projects/kliniko.png",
     technologies: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     demoUrl: "",
     githubUrl: "",
